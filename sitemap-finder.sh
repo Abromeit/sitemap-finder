@@ -493,7 +493,7 @@ readonly tstamp_start=$(date +'%s')
 declare -i requests_done=0
 
 # we don't normalize much here. just lowercase + remove trailing slashes 'n' stuff.
-readonly starturl=$(echo "${1}" | tr '[:upper:]' '[:lower:]' | grep -o -P '^https?\://[^/]+')
+readonly starturl=$(echo "${1:-}" | tr '[:upper:]' '[:lower:]' | grep -o -P '^https?\://[^/]+')
 
 
 function br() {
