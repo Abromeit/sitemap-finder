@@ -1,4 +1,4 @@
-# Abro's (XML) Sitemap Finder
+# [Abro's Sitemap Finder](https://github.com/Abromeit/sitemap-finder)
 
 A battle-tested bash script to find XML sitemaps on a website.
 
@@ -74,10 +74,26 @@ You can tweak the script's behavior by editing the file directly.
 
 ### Dependencies
 
-You probably already have these, but the script needs:
+You probably already have these, but the Sitemap Finder needs:
 
 - `bash`
 - `curl`
 - `tput` (for the fancy colors)
 - `bc` (for the math at the end)
 - `perl` (for that one little regex)
+
+## Q&A
+
+**Q: Why is the script not faster?**
+
+**A:** The Sitemap Finder is already running at a speed that's better than "nice citizen mode" – without turning the scan into a real stress test for the target server. That's because every request goes to the same host, and hammering it with more parallel requests would be, well, not cool (some requests might not get answered correctly by the remote server any more or worse).
+
+So, this is the sweet spot: We're as fast as possible without causing too much trouble on well configured servers. After all its just a couple of sequential requests. Not 100s of thousands as in a DOS attack. If the remote machine cannot deal with that, it cannot deal with internet traffic.
+
+And you – just check your mails or go for a coffee, the script will finish in a few minutes.
+
+## Copyright
+
+Copyright (c) 2025 Daniel Abromeit (https://daniel-abromeit.de/)
+
+Released under the MIT License. [See LICENSE for details.](LICENSE)
