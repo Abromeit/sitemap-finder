@@ -13,7 +13,7 @@ So you start guessing. `sitemap.xml`, `sitemap_index.xml`, `sitemap-1.xml`... yo
 It's a simple, two-stage process:
 
 1. **The Civilized Method**: It first checks `/robots.txt` for a `Sitemap:` entry. If it finds one, it prints it, and we're all happy.
-2. **The Brute-Force Method**: If `robots.txt` comes up empty _(or `QUIT_ON_FIRST_RESULT` is `0`)_, the script methodically tests a list of over 1,300 potential sitemap URLs based on paths i've seen in the wild over the years.
+2. **The Brute-Force Method**: If `robots.txt` comes up empty _(or `QUIT_ON_FIRST_RESULT` is `0`)_, the script methodically tests a list of ~1,700 potential sitemap URLs based on paths i've seen in the wild over the years.
 
 The script checks each candidate URL via HEAD requests, until it receives a `2xx` status code and a content type that looks like XML, GZIP, or plain text. (Since Google allows sitemaps in `.txt` format, we check for that too.)
 
