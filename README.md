@@ -56,9 +56,9 @@ The script checks each candidate URL via HEAD requests, until it receives a `2xx
 =                                             =
 = done.                                       =
 =                                             =
-= script runtime:       168sec. ~= 2.80min.   =
-= sum of http-requests: 1357                  =
-= avg. requests / sec:  8.07                  =
+= script runtime:       217sec. ~= 3.61min.   =
+= sum of http-requests: 1684                  =
+= avg. requests / sec:  7.76                  =
 ===============================================
 ```
 
